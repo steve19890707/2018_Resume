@@ -1,0 +1,237 @@
+.main_information {
+    position: relative;
+    padding-bottom: 5%;
+    .text_container {
+        width: 900px;
+        box-sizing: border-box;
+        padding: 8% 0 0 15%;
+        margin: 0 auto 0 24%;
+        z-index: 100;
+        .name {
+            font-size: 18px;
+            color: #000;
+            font-weight: bold;
+        }
+        .borderLine {
+            width: 100%;
+            margin-top: 15px;
+            border-bottom: 5px solid #31AABF;
+        }
+        .birthday {
+            margin-top: 15px;
+            font-size: 16px;
+            color: #000;
+        }
+        .info_icon {
+            margin-top: 10px;
+            .icon {
+                display: inline-block;
+                vertical-align: middle;
+                width: 30px;
+                height: 30px;
+                background: url(../images/info-icons.png)no-repeat;
+                &-mobile {
+                    background-position-x: (1 / 2) * 100%;
+                }
+                &-line {
+                    background-position-x: 100%;
+                }
+            }
+            span {
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 16px;
+                color: #000;
+                margin-left: 2%;
+            }
+        }
+        .introdution {
+            margin-top: 45px;
+            font-size: 18px;
+            color: #000;
+            font-weight: bold;
+        }
+        section {
+            span {
+                font-size: 24px;
+                color: #31AABF;
+                font-weight: bold;
+            }
+            margin-top: 15px;
+            color: #000;
+            font-size: 14px;
+            line-height: 200%;
+        }
+    }
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30%;
+        height: 100%;
+        background: url(../images/background-1.jpg) no-repeat;
+        animation: BG_move 120s infinite linear;
+        z-index: 1;
+    }
+    .headPhoto {
+        position: absolute;
+        background: #31AABF;
+        width: 10%;
+        padding-bottom: 10%;
+        transform: rotate(45deg)rotateY(0deg);
+        margin-top: 8%;
+        top: 0;
+        left: 25%;
+        z-index: 2;
+        animation: headPhoto_show 1s;
+        &::before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 50%;
+            background: url(../images/headshot.png)no-repeat;
+            background-size: 100%;
+            width: 120%;
+            padding-bottom: 120%;
+            transform: translate(-50%,-50%) rotate(-45deg);
+        }
+    }
+    // 主視覺
+    .picture {
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        width: 30%;
+        padding-bottom: 22%;
+        z-index: 1;
+        transform: translateX(25%);
+        animation: show 1s;
+    }
+    .other_picture {
+        position: relative;
+        width: 100%;
+        .outline {
+            position: absolute;
+            width: 45%;
+            padding-bottom: 45%;
+            border: 3px solid #346986;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            z-index: 1;
+            animation: none;
+        }
+        .box-title {
+            position: absolute;
+            width: 26%;
+            padding-bottom: 26%;
+            border: 15px solid #fff;
+            background: rgba(#000,0.85);
+            margin-top: 8%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            z-index: 3;
+            animation: none;
+        }
+        .title {
+            position: absolute;
+            text-align: center;
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 18.5%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            text-shadow: 0 0 10px #000;
+            z-index: 4;
+            animation: none;
+        }
+        .box-left {
+            position: absolute;
+            width: 25%;
+            padding-bottom: 25%;
+            margin-top: 10%;
+            top: 0;
+            left: 9%;
+            background: #346986;
+            transform: rotate(45deg);
+            z-index: 2;
+            animation: none;
+        }
+        .box-top {
+            position: absolute;
+            width: 20%;
+            padding-bottom: 20%;
+            top: 0;
+            left: 50%;
+            background: #333333;
+            transform:translate(-50%,-45%) rotate(45deg);
+            z-index: 2;
+            animation: none;
+        }
+        .box-right {
+            position: absolute;
+            width: 15%;
+            padding-bottom: 15%;
+            margin-top: 23%;
+            top: 0;
+            right: 23%;
+            background: #31AABF;
+            transform: rotate(45deg);
+            z-index: 2;
+            animation: none;
+        }
+        .box-bottom {
+            position: absolute;
+            width: 20%;
+            padding-bottom: 20%;
+            margin-top: 33%;
+            top: 0;
+            left: 50%;
+            background: #666666;
+            transform:translateX(-50%) rotate(45deg);
+            z-index: 2;
+            animation: none;
+        }
+    }
+}
+
+@media screen and (max-width:1000px){
+    .main_information {
+        .text_container {
+            width: 90%;
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 8% 0 0 0 ;
+        }
+        .headPhoto {
+            width: 13%;
+            padding-bottom: 13%;
+            margin-top: 25%;
+            left: 28%;
+        }
+        .background {
+            display: none;
+        }
+        .picture {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width:414px){
+    .main_information {
+        .text_container {
+            padding: 12% 0 0 0 ;
+        }
+        .headPhoto {
+            width: 38%;
+            padding-bottom: 38%;
+            margin-top: 25%;
+            right: 0%;
+            left: unset;
+        }
+    }
+}

@@ -1,0 +1,62 @@
+// home 動畫
+@keyframes show {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes close {
+    0% {opacity: 0;}
+    100% {opacity: 0;}
+}
+@keyframes btn_rotate {
+    0% {transform: translateY(-15%) scale(0,0)rotate(360deg);}
+    100% {transform: translateY(-15%) scale(0.8,0.8)rotate(0deg);}
+}
+
+@keyframes outline_scale {
+    0% {transform: translateX(-50%) rotate(45deg) scale(0,0);}
+    100% {transform: translateX(-50%) rotate(45deg) scale(1,1);}
+}
+@keyframes box-title_scale {
+    0% {transform: translateX(-50%) rotate(45deg) scale(0,0);}
+    33% {transform: translateX(-50%) rotate(45deg) scale(0,0);}
+    100% {transform: translateX(-50%) rotate(45deg) scale(1,1);}
+}
+@keyframes title_scale {
+    0% {transform: translateX(-50%) scale(0,0);}
+    33% {transform: translateX(-50%) scale(0,0);}
+    100% {transform: translateX(-50%) scale(1,1);}
+}
+@keyframes box-left_scale {
+    0% {transform: rotate(45deg) scale(0,0);}
+    30% {transform: rotate(45deg) scale(0,0);}
+    100% {transform: rotate(45deg) scale(1,1);}
+}
+@keyframes box-right_scale {
+    0% {transform: rotate(45deg) scale(0,0);}
+    30% {transform: rotate(45deg) scale(0,0);}
+    100% {transform: rotate(45deg) scale(1,1);}
+}
+@keyframes box-top_scale {
+    0% {transform:translate(-50%,-45%) rotate(45deg) scale(0,0);}
+    30% {transform:translate(-50%,-45%) rotate(45deg) scale(0,0);}
+    100% {transform:translate(-50%,-45%) rotate(45deg) scale(1,1);}
+}
+@keyframes box-bottom_scale {
+    0% {transform:translateX(-50%) rotate(45deg) scale(0,0);}
+    30% {transform:translateX(-50%) rotate(45deg) scale(0,0);}
+    100% {transform:translateX(-50%) rotate(45deg) scale(1,1);}
+}
+
+// 背景動畫
+@keyframes BG_move {
+    0% {background-position-x: 0%}
+    50% {background-position-x: 100%}
+    100% {background-position-x: 0%}
+}
+
+// 大頭照動畫
+@keyframes headPhoto_show {
+    0% {transform: rotate(0deg) rotateY(90deg);}
+    100% {transform: rotate(45deg) rotateY(0deg);}
+}
